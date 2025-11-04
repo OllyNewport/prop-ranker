@@ -1,0 +1,53 @@
+[
+  {"id":"ftmo","name":"FTMO","rules":[
+    "Two-step evaluation (Challenge + Verification) with daily & overall loss limits.",
+    "Profit targets per account size; minimum trading days.",
+    "Weekend/news policies vary by instrument; confirm.",
+    "Scaling based on consistency and risk adherence."
+  ]},
+  {"id":"tft","name":"The Funded Trader","rules":[
+    "Two-phase evaluation with daily/overall loss limits.",
+    "Profit targets and min trading days per plan.",
+    "News/holding policies by asset; check schedule."
+  ]},
+  {"id":"e8","name":"E8 Funding","rules":[
+    "Two-phase evaluation; loss limits and targets.",
+    "Risk management required; min trading days apply.",
+    "Positions over weekend/news subject to policy."
+  ]},
+  {"id":"fidelcrest","name":"Fidelcrest","rules":[
+    "Two-phase eval; daily & overall loss limits.",
+    "Profit targets per account; consistency required.",
+    "Holds over news/weekend depend on plan."
+  ]},
+  {"id":"fundednext","name":"FundedNext","rules":[
+    "Two-step evaluation; daily/overall loss limits.",
+    "Profit split and targets defined by plan.",
+    "Flat windows around certain news events."
+  ]},
+  {"id":"tff","name":"True Forex Funds","rules":[
+    "Two-step eval; daily/overall loss; min trading days.",
+    "Max lot size guidance per balance tier.",
+    "Weekend/news rules apply by instrument."
+  ]},
+  {"id":"surge","name":"SurgeTrader","rules":[
+    "One-step evaluation; overall loss limit applies.",
+    "Profit target varies by account.",
+    "Overnight/overweekend holds allowed by plan."
+  ]},
+  {"id":"the5ers","name":"The 5%ers","rules":[
+    "Several programs; risk limits/targets per program.",
+    "Scaling plan grows capital on milestones.",
+    "News/overnight rules differ by program."
+  ]},
+  {"id":"myfundedfx","name":"MyFundedFX","rules":[
+    "Two-step eval; daily/overall loss; min days.",
+    "Leverage & lot caps per account size.",
+    "Restricted trading around certain news."
+  ]},
+  {"id":"fundedengineer","name":"Funded Engineer","rules":[
+    "Two-phase evaluation with loss limits & targets.",
+    "Consistency and min days required.",
+    "News/holding rules vary by product."
+  ]}
+]

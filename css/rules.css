@@ -1,0 +1,29 @@
+.rules-wrap{ padding-bottom: 2rem; }
+.rules-hero{ text-align:center; padding:2rem 0 1rem; }
+.rules-hero .sub{ color:#cfd0e1; }
+
+.rules-toc{
+  display:flex; flex-wrap:wrap; gap:.5rem .6rem;
+  padding:.7rem .9rem; margin-bottom:1rem;
+}
+.rules-toc a{
+  padding:.28rem .6rem; border:1px solid rgba(255,255,255,.12);
+  border-radius:.6rem; background:var(--panel-2); color:#eaeaf4;
+}
+.rules-toc a:hover{ border-color: var(--accent); }
+
+.firm-rules{
+  padding:1rem 1.1rem; margin-bottom:1rem;
+}
+.firm-rules h2{
+  margin:.2rem 0 .6rem; font-size:1.45rem;
+}
+.firm-rules ul{
+  margin:0; padding-left:1.1rem; line-height:1.55;
+  color:#d9d9e6;
+}
+.firm-rules li{ margin:.2rem 0; }
+
+.disclaimer{
+  margin:1rem 0 2rem; color:#aeb0c4; font-size:.92rem; text-align:center;
+}

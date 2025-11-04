@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futures Prop Ranker</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/home.css"/>
+</head>
+
+<body>
+  <header id="headerMount"></header>
+  <script src="../js/header.js" defer></script>
+
+  <main>
+    <div class="container trustpilot-pill">
+      <span class="tp-badge"><i class="fas fa-star"></i> Trustpilot</span>
+      <span class="tp-score">4.8</span>
+      <span class="tp-stars">★★★★★</span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero container">
+      <h1 class="hero-title">The Leading Prop Firm Comparison Platform</h1>
+      <p class="hero-sub">Where serious traders compare top firms — and get the best discounts.</p>
+
+      <div class="hero-badges">
+        <div class="badge-box"><i class="fas fa-shield-alt"></i> 50+ Verified Top Prop Firms</div>
+        <div class="badge-box"><i class="fas fa-list-check"></i> 500+ Challenges</div>
+        <div class="badge-box"><i class="fas fa-comments"></i> 5,000+ Real Trader Reviews</div>
+        <div class="badge-box"><i class="fas fa-globe"></i> 3M+ Monthly Website Views</div>
+      </div>
+    </section>
+
+    <!-- (Original Offers section remains wherever you already have it.
+         We intentionally removed the new "November Offers" rail so your old styling is preserved.) -->
+
+    <!-- FILTER BAR -->
+    <section class="seg-filters container" style="padding:0 1rem">
+      <div class="right-controls">
+        <div class="filter-pills">
+          <button id="btnPopular" class="pill pill-on"><i class="fas fa-fire"></i> Popular</button>
+          <button id="btnAll" class="pill">All</button>
+        </div>
+
+        <div class="search-pill">
+          <i class="fas fa-search"></i>
+          <input id="firmSearch" type="text" placeholder="Search firms..." aria-label="Search firms">
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE GENERATED FROM JSON -->
+    <section id="firms" class="container table-wrap">
+      <div id="firmTable" class="table"></div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="container reviews-section">
+      <h2 class="reviews-title">Trusted By Professionals</h2>
+
+      <div class="reviews-carousel" id="reviews">
+        <button class="rev-arrow prev" aria-label="Previous review">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="rev-viewport">
+          <div class="rev-track">
+            <!-- Slide 1 -->
+            <article class="review-card">
+              <h4>Med J</h4>
+              <p>Prop Firm Match is an excellent resource for traders looking to find reputable prop trading firms.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">July 9th, 2025</div>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="review-card">
+              <h4>Vikash</h4>
+              <p>It’s one of the most useful and important websites for traders, propfirmmatch has lots of new features.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">July 9th, 2025</div>
+            </article>
+
+            <!-- Slide 3 -->
+            <article class="review-card">
+              <h4>Irvan I</h4>
+              <p>I won a giveaway here. @propfirmmatch is one of the most trusted and best platforms for forex traders.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">July 9th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Sam P</h4>
+              <p>The tables are clear and the filters actually helped me choose between two futures firms in minutes.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 2nd, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Aisha K</h4>
+              <p>Love the clean design and the fact the data isn’t buried. Perfect for quick comparisons on mobile.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 5th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Marco D</h4>
+              <p>Discounts and payouts info are on point. I funded an account and the code worked as advertised.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 7th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Elena V</h4>
+              <p>Finally a site focused on futures. The platform tags (Rithmic, Ninja) are super handy.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 9th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Chris L</h4>
+              <p>Accurate summaries, realistic ratings, and no fluff. This has become my go-to reference.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 12th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Priya S</h4>
+              <p>The search works great with the JSON table. I could filter by platform and decide quickly.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 14th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Daniel R</h4>
+              <p>Clear pros/cons without hype. Helped me avoid a firm that didn’t support my platform.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 18th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Nora H</h4>
+              <p>Exactly what I needed before funding—rules in plain English and easy side-by-side data.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 20th, 2025</div>
+            </article>
+
+            <article class="review-card">
+              <h4>Jake T</h4>
+              <p>Fast, minimal, and accurate. The best futures prop comparison page I’ve used so far.</p>
+              <div class="stars">★★★★★</div>
+              <div class="review-date">August 23rd, 2025</div>
+            </article>
+          </div>
+        </div>
+
+        <button class="rev-arrow next" aria-label="Next review">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="rev-dots" id="revDots"></div>
+    </section>
+
+    <div id="page-bottom"></div>
+  </main>
+
+  <!-- JS -->
+  <script src="../js/table.js" defer></script>
+  <script src="../js/theme.js" defer></script>
+
+  <script>
+    // Live search filtering for JSON-rendered table (fallback)
+    window.addEventListener('DOMContentLoaded',()=>{
+      const input=document.getElementById('firmSearch');
+      if(!input)return;
+      input.addEventListener('input',()=>{
+        const q=input.value.toLowerCase();
+        document.querySelectorAll('.table-row').forEach(r=>{
+          r.style.display=r.textContent.toLowerCase().includes(q)?'':'none';
+        });
+      });
+    });
+  </script>
+
+  <script>
+    (function(){
+      const viewport = document.querySelector('.rev-viewport');
+      const track = document.querySelector('.rev-track');
+      if (!viewport || !track) return;
+
+      const slides = Array.from(track.children);
+      let autoTimer = null;
+      let index = 0;
+
+      function slidesPerView() {
+        const card = slides[0];
+        if (!card) return 1;
+        const cardW = card.getBoundingClientRect().width;
+        const vpW = viewport.getBoundingClientRect().width;
+        return Math.max(1, Math.round(vpW / cardW));
+      }
+
+      function go(to) {
+        index = (to + slides.length) % slides.length;
+        const card = slides[index];
+        if (!card) return;
+        const left = card.offsetLeft - (viewport.clientWidth - card.clientWidth) / 2;
+        viewport.scrollTo({ left, behavior: 'smooth' });
+        updateDots();
+      }
+
+      function next() { go(index + Math.max(1, slidesPerView())); }
+      function prev() { go(index - Math.max(1, slidesPerView())); }
+
+      document.querySelector('.rev-arrow.next')?.addEventListener('click', next);
+      document.querySelector('.rev-arrow.prev')?.addEventListener('click', prev);
+
+      function startAuto(){ stopAuto(); autoTimer = setInterval(next, 4000); }
+      function stopAuto(){ if (autoTimer) clearInterval(autoTimer); }
+      startAuto();
+      viewport.addEventListener('mouseenter', stopAuto);
+      viewport.addEventListener('mouseleave', startAuto);
+
+      const dotsWrap = document.getElementById('revDots');
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const per = slidesPerView();
+        const count = Math.ceil(slides.length / per);
+        for (let i=0;i<count;i++){
+          const b=document.createElement('button');
+          b.addEventListener('click', ()=>go(i*per));
+          dotsWrap.appendChild(b);
+        }
+        updateDots();
+      }
+      function updateDots() {
+        const per = slidesPerView();
+        const currentGroup = Math.floor(index / per);
+        dotsWrap.querySelectorAll('button').forEach((b,i)=> {
+          b.classList.toggle('active', i === currentGroup);
+        });
+      }
+
+      let resizeTO=null;
+      window.addEventListener('resize', ()=>{
+        clearTimeout(resizeTO);
+        resizeTO=setTimeout(()=>{ buildDots(); go(index); }, 150);
+      });
+
+      buildDots();
+      go(0);
+    })();
+  </script>
+
+  <!-- Newsletter CTA -->
+<section class="container nl-cta" aria-labelledby="nl-cta-title">
+  <div class="nl-card">
+    <div class="nl-glow nl-glow--left"></div>
+    <div class="nl-glow nl-glow--right"></div>
+
+    <p class="nl-kicker">Stay connected</p>
+    <h2 id="nl-cta-title" class="nl-title">
+      Subscribe For The Latest In Prop<br class="nl-br"/>
+      Trading News And Deals
+    </h2>
+
+    <form id="newsletterForm" class="nl-form" novalidate>
+      <label class="sr-only" for="nl-email">Your email</label>
+      <input id="nl-email" name="email" type="email" inputmode="email"
+             placeholder="Your email" required />
+      <button type="submit" class="nl-btn">Subscribe</button>
+      <p class="nl-hint" id="nl-hint" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Load once per page -->
+<script src="../js/newsletter.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Best Value – Futures Prop Ranker</title>
+
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/bestvalue.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Shared header -->
+  <header id="headerMount"></header>
+  <script src="../js/header.js" defer></script>
+
+  <main class="container">
+    <section class="bv-hero">
+      <h1>Best Value</h1>
+      <p class="sub">Rank firms by value using adjustable weights. Scores are computed from your JSON (rating, reviews, promo, allocation, years, platforms).</p>
+    </section>
+
+    <!-- Controls -->
+    <section class="bv-controls card">
+      <div class="ctrl-row">
+        <label>Rating <span data-k="wRating" class="w-val">25</span>%</label>
+        <input id="wRating" type="range" min="0" max="50" value="25">
+      </div>
+      <div class="ctrl-row">
+        <label>Reviews (popularity) <span data-k="wReviews" class="w-val">20</span>%</label>
+        <input id="wReviews" type="range" min="0" max="40" value="20">
+      </div>
+      <div class="ctrl-row">
+        <label>Promo % <span data-k="wPromo" class="w-val">20</span>%</label>
+        <input id="wPromo" type="range" min="0" max="40" value="20">
+      </div>
+      <div class="ctrl-row">
+        <label>Max Allocation <span data-k="wAlloc" class="w-val">20</span>%</label>
+        <input id="wAlloc" type="range" min="0" max="40" value="20">
+      </div>
+      <div class="ctrl-row">
+        <label>Years in Operation <span data-k="wYears" class="w-val">10</span>%</label>
+        <input id="wYears" type="range" min="0" max="30" value="10">
+      </div>
+      <div class="ctrl-row">
+        <label>Platforms (breadth) <span data-k="wPlats" class="w-val">5</span>%</label>
+        <input id="wPlats" type="range" min="0" max="20" value="5">
+      </div>
+
+      <div class="ctrl-actions">
+        <button id="equalize" class="btn">Equal Weights</button>
+        <button id="reset" class="btn">Reset</button>
+        <div class="note">Weights auto-normalize to 100%.</div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="table-wrap">
+      <div class="table" id="bvTable"></div>
+    </section>
+  </main>
+
+  <script src="../js/bestvalue.js" defer></script>
+</body>
+</html>

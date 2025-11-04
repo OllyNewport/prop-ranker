@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payouts | Futures Prop Ranker</title>
+
+  <!-- SEO basics -->
+  <meta name="description" content="Compare prop firm payout volumes, counts, largest payouts, average sizes, and median payout times."/>
+  <link rel="canonical" href="/pages/payouts.html"/>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS (shared + page-specific) -->
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/payouts.css">
+
+</head>
+<body>
+  <header id="headerMount"></header>
+  <script src="../js/header.js" defer></script>
+
+  <main>
+    <section class="payouts-header">
+      <h1>Payouts</h1>
+      <p>Easily track and compare payout times across prop firms.</p>
+    </section>
+
+    <section class="filters-bar" aria-label="Filters">
+      <button type="button">Last 30 Days</button>
+      <button type="button" class="active">All</button>
+      <button type="button">CFD</button>
+      <button type="button">Futures</button>
+      <label class="sr-only" for="search-payouts">Search payouts</label>
+      <input id="search-payouts" type="text" placeholder="Search" class="search-input" aria-label="Search payouts"/>
+    </section>
+
+    <section class="payouts-table" aria-label="Payouts table">
+      <div class="payouts-table-header">
+        <div>Firm / Rank</div>
+        <div>Total Payouts</div>
+        <div>No. of Payouts</div>
+        <div>Largest Single Payout</div>
+        <div>Avg Payout Size</div>
+        <div>Avg Median Time</div>
+        <div>Actions</div>
+      </div>
+
+      <!-- Row: Apex -->
+      <div class="payouts-table-row">
+        <div class="firm-name">
+          <img src="/images/firms/apex.png" class="firm-logo" alt="Apex Trader Funding logo"/>
+          <div>
+            Apex<br/>
+            <span class="rating">4.6 ★ (1.2k)</span>
+          </div>
+        </div>
+        <div>
+          $2,400,000
+          <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+        </div>
+        <div>1,843</div>
+        <div>$12,500</div>
+        <div>$1,303</div>
+        <div>1 day</div>
+        <div><a class="view-btn firm-btn" href="#!" rel="sponsored noopener" aria-label="Visit Apex Trader Funding">View</a></div>
+      </div>
+
+      <!-- Example additional rows (duplicate and edit as needed) -->
+      <div class="payouts-table-row">
+        <div class="firm-name">
+          <img src="/images/firms/topstep.png" class="firm-logo" alt="Topstep logo"/>
+          <div>
+            Topstep<br/>
+            <span class="rating">4.8 ★ (12k)</span>
+          </div>
+        </div>
+        <div>
+          $3,100,000
+          <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+        </div>
+        <div>2,214</div>
+        <div>$15,000</div>
+        <div>$1,402</div>
+        <div>1–2 days</div>
+        <div><a class="view-btn firm-btn" href="#!" rel="sponsored noopener" aria-label="Visit Topstep">View</a></div>
+      </div>
+
+      <div class="payouts-table-row">
+        <div class="firm-name">
+          <img src="/images/firms/ftmo.png" class="firm-logo" alt="FTMO logo"/>
+          <div>
+            FTMO<br/>
+            <span class="rating">4.9 ★ (12k)</span>
+          </div>
+        </div>
+        <div>
+          $4,500,000
+          <div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div>
+        </div>
+        <div>3,120</div>
+        <div>$20,000</div>
+        <div>$1,440</div>
+        <div>1–3 days</div>
+        <div><a class="view-btn firm-btn" href="#!" rel="sponsored noopener" aria-label="Visit FTMO">View</a></div>
+      </div>
+      <!-- /Example additional rows -->
+    </section>
+
+    <!-- Email signup -->
+    <section class="newsletter-section">
+      <p class="newsletter-tag">STAY IN THE LOOP</p>
+      <h2 class="newsletter-heading">Get Prop Trading Updates & Exclusive Offers</h2>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="/js/theme.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Payouts page bits on top of theme.css */
+.payouts-header{padding:28px 0;text-align:center}
+.filters-bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.filters-bar button{background:#0c0c0c;border:1px solid var(--border);color:#fff;padding:8px 12px;border-radius:10px}
+.search-input{padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:#0c0c0c;color:#fff}
+
+.payouts-table .table-header,
+.payouts-table .table-row{grid-template-columns:1.3fr .9fr .8fr 1.1fr 1fr .9fr .6fr}
+.firm-name{display:flex;align-items:center;gap:10px}
+.firm-logo{width:32px;height:32px;border-radius:6px;background:#222;border:1px solid var(--border)}
+.progress-bar{height:8px;background:#0b0b0b;border:1px solid var(--border);border-radius:999px;margin-top:6px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.view-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:6px 10px;border-radius:8px;cursor:pointer}
+.view-btn:hover{background:var(--accent);color:#000}

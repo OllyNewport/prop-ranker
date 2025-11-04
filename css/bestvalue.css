@@ -1,0 +1,25 @@
+.bv-hero{ text-align:center; padding:2rem 0 1rem; }
+.bv-hero .sub{ color:#cfd0e1; }
+
+.bv-controls{
+  margin: 0 0 1rem;
+  padding: 1rem;
+}
+.ctrl-row{
+  display:grid; grid-template-columns: 260px 1fr;
+  align-items:center; gap:1rem; margin:.35rem 0;
+}
+.ctrl-row label{ font-weight:700; }
+.w-val{ color: var(--accent); }
+
+.ctrl-actions{
+  display:flex; gap:.6rem; align-items:center; margin-top:.6rem;
+}
+.ctrl-actions .note{ color:#aeb0c4; font-size:.9rem; }
+
+.value-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:56px; height:28px; border-radius:14px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#111; font-weight:900;
+}

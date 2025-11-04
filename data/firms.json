@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "apex",
+    "name": "Apex Trader Funding",
+    "country": "US",
+    "years": 4,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic", "Tradovate"],
+    "maxAllocation": 300000,
+    "rating": 4.6,
+    "reviews": 15000,
+    "promo": "80% OFF"
+  },
+  {
+    "slug": "topstep",
+    "name": "Topstep",
+    "country": "US",
+    "years": 10,
+    "assets": ["Futures"],
+    "platforms": ["TopstepX"],
+    "maxAllocation": 300000,
+    "rating": 4.8,
+    "reviews": 12000,
+    "promo": "20% OFF"
+  },
+  {
+    "slug": "myfundedfutures",
+    "name": "My Funded Futures",
+    "country": "US",
+    "years": 2,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic", "Tradovate", "NinjaTrader"],
+    "maxAllocation": 150000,
+    "rating": 4.4,
+    "reviews": 2400,
+    "promo": "50% OFF"
+  },
+  {
+    "slug": "alphafutures",
+    "name": "Alpha Futures",
+    "country": "GB",
+    "years": 3,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic", "NinjaTrader"],
+    "maxAllocation": 150000,
+    "rating": 4.5,
+    "reviews": 1800,
+    "promo": "25% OFF"
+  },
+  {
+    "slug": "takeprofittrader",
+    "name": "Take Profit Trader",
+    "country": "US",
+    "years": 5,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic"],
+    "maxAllocation": 150000,
+    "rating": 4.3,
+    "reviews": 2900,
+    "promo": "30% OFF"
+  },
+  {
+    "slug": "fundedtradingplus",
+    "name": "Funded Trading Plus",
+    "country": "GB",
+    "years": 3,
+    "assets": ["FX", "Indices", "Futures"],
+    "platforms": ["MT5", "cTrader"],
+    "maxAllocation": 200000,
+    "rating": 4.7,
+    "reviews": 10000,
+    "promo": "15% OFF"
+  },
+  {
+    "slug": "earn2trade",
+    "name": "Earn2Trade",
+    "country": "US",
+    "years": 8,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic"],
+    "maxAllocation": 200000,
+    "rating": 4.6,
+    "reviews": 6000,
+    "promo": "10% OFF"
+  },
+  {
+    "slug": "oneuptrader",
+    "name": "OneUp Trader",
+    "country": "US",
+    "years": 7,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic", "Tradovate"],
+    "maxAllocation": 250000,
+    "rating": 4.5,
+    "reviews": 8000,
+    "promo": "40% OFF"
+  },
+  {
+    "slug": "leelootrading",
+    "name": "Leeloo Trading",
+    "country": "US",
+    "years": 6,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic"],
+    "maxAllocation": 300000,
+    "rating": 4.4,
+    "reviews": 5000,
+    "promo": "50% OFF"
+  },
+  {
+    "slug": "bulenox",
+    "name": "Bulenox",
+    "country": "US",
+    "years": 3,
+    "assets": ["Futures"],
+    "platforms": ["Rithmic"],
+    "maxAllocation": 250000,
+    "rating": 4.2,
+    "reviews": 3500,
+    "promo": "60% OFF"
+  }
+]

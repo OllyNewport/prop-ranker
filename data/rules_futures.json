@@ -1,0 +1,58 @@
+[
+  {"id":"apex","name":"Apex Trader Funding","rules":[
+    "Evaluation with trailing threshold; breach if balance crosses trailing level.",
+    "No fixed daily loss limit; risk discipline expected.",
+    "Profit target varies by account size; pass once target hit.",
+    "Consistency guideline (avoid one-day pass spikes).",
+    "Scaling & contract limits per balance tier.",
+    "News/overnight rules depend on product & platform; verify."
+  ]},
+  {"id":"topstep","name":"Topstep","rules":[
+    "One-step evaluation with trailing drawdown & target.",
+    "Daily risk guidance and consistency encouraged.",
+    "Scaling plan defines max contracts by equity tier.",
+    "Some high-impact releases may have restrictions.",
+    "Overnight/holiday trading varies by product."
+  ]},
+  {"id":"mffutures","name":"My Funded Futures","rules":[
+    "Trailing drawdown + profit target per account size.",
+    "Daily risk guidance; repeated breaches fail the eval.",
+    "Restricted news windows for specific reports.",
+    "Position size limits by tier; scale on growth."
+  ]},
+  {"id":"alpha","name":"Alpha Futures","rules":[
+    "Trailing threshold + target; breach on violation.",
+    "High-impact news may require flat positions.",
+    "Scaling schedule caps contracts by balance."
+  ]},
+  {"id":"tpt","name":"Take Profit Trader","rules":[
+    "Targets by size; trailing drawdown enforcement.",
+    "Recommended daily max loss.",
+    "Flat windows around some releases."
+  ]},
+  {"id":"ftp","name":"Funded Trading Plus","rules":[
+    "Multi-asset evaluation; thresholds per plan.",
+    "Daily loss policy; breaching drawdown = fail.",
+    "News rules by asset class; confirm calendars."
+  ]},
+  {"id":"e2t","name":"Earn2Trade","rules":[
+    "Evaluation targets with trailing drawdown.",
+    "Minimum trading days & consistency recommended.",
+    "Contract scaling by account size & phase."
+  ]},
+  {"id":"oneup","name":"OneUp Trader","rules":[
+    "One-phase eval with target & trailing threshold.",
+    "Daily discipline & consistency guidance.",
+    "Certain reports have flat windows."
+  ]},
+  {"id":"leeloo","name":"Leeloo Trading","rules":[
+    "Hit target without breaching trailing threshold.",
+    "Daily risk guidelines; excessive daily loss fails eval.",
+    "Scaling step caps contracts; growth unlocks size."
+  ]},
+  {"id":"bulenox","name":"Bulenox","rules":[
+    "Evaluation with trailing drawdown & target.",
+    "Daily loss guidance; repeated breaches fail.",
+    "Holds & session rules per instrument."
+  ]}
+]

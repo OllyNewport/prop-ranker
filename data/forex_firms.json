@@ -1,0 +1,112 @@
+[
+  {
+    "name": "FTMO",
+    "rating": 4.9,
+    "reviews": 12000,
+    "country": "CZ",
+    "years": 9,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 400000,
+    "promo": "15% OFF"
+  },
+  {
+    "name": "The Funded Trader",
+    "rating": 4.5,
+    "reviews": 8000,
+    "country": "US",
+    "years": 4,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 400000,
+    "promo": "20% OFF"
+  },
+  {
+    "name": "E8 Funding",
+    "rating": 4.6,
+    "reviews": 6500,
+    "country": "US",
+    "years": 4,
+    "assets": ["FX", "Indices", "Metals"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 300000,
+    "promo": "25% OFF"
+  },
+  {
+    "name": "Fidelcrest",
+    "rating": 4.2,
+    "reviews": 5000,
+    "country": "FI",
+    "years": 8,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 1000000,
+    "promo": "30% OFF"
+  },
+  {
+    "name": "FundedNext",
+    "rating": 4.4,
+    "reviews": 9000,
+    "country": "AE",
+    "years": 3,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 400000,
+    "promo": "20% OFF"
+  },
+  {
+    "name": "True Forex Funds",
+    "rating": 4.5,
+    "reviews": 7000,
+    "country": "HU",
+    "years": 5,
+    "assets": ["FX", "Indices", "Metals"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 400000,
+    "promo": "10% OFF"
+  },
+  {
+    "name": "SurgeTrader",
+    "rating": 4.3,
+    "reviews": 4200,
+    "country": "US",
+    "years": 4,
+    "assets": ["FX", "Indices", "Metals"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 1000000,
+    "promo": "15% OFF"
+  },
+  {
+    "name": "The 5%ers",
+    "rating": 4.8,
+    "reviews": 6000,
+    "country": "IL",
+    "years": 9,
+    "assets": ["FX", "Indices", "Metals"],
+    "platforms": ["MT4", "MT5"],
+    "maxAllocation": 400000,
+    "promo": "5% OFF"
+  },
+  {
+    "name": "MyFundedFX",
+    "rating": 4.4,
+    "reviews": 4800,
+    "country": "US",
+    "years": 3,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5", "cTrader"],
+    "maxAllocation": 400000,
+    "promo": "25% OFF"
+  },
+  {
+    "name": "Funded Engineer",
+    "rating": 4.6,
+    "reviews": 5200,
+    "country": "US",
+    "years": 3,
+    "assets": ["FX", "Indices", "Metals", "Crypto"],
+    "platforms": ["MT4", "MT5", "DXtrade"],
+    "maxAllocation": 400000,
+    "promo": "20% OFF"
+  }
+]

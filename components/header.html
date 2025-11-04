@@ -1,0 +1,73 @@
+<header class="site-header">
+  <div class="header-top container">
+    <div class="left-header">
+      <!-- Brand / Logo -->
+      <a href="../pages/index.html" class="site-logo" aria-label="Prop Ranker home">
+        <img src="../images/logo.png" alt="Prop Ranker" class="logo-img" />
+      </a>
+
+      <!-- Futures / Forex switch -->
+      <div id="themeSwitch" class="cfdfutures-switch" aria-label="Theme switch">
+        <button type="button" data-theme="futures" class="active">Futures</button>
+        <button type="button" data-theme="fx">Forex</button>
+      </div>
+    </div>
+
+    <!-- Right: Keep Updated -->
+    <div class="right-header">
+      <button type="button" class="btn keep-updated" id="openNewsletter">
+        <i class="fas fa-bell"></i> Keep Updated
+      </button>
+    </div>
+  </div>
+
+  <nav class="main-nav container">
+    <a href="../pages/index.html">Home</a>
+    <a href="../pages/index.html#firms">Offers</a>
+    <a href="../pages/bestvalue.html">Best Value</a>
+    <a href="../pages/index.html#page-bottom">Reviews</a>
+    <a href="../pages/topfive.html">Our Top Five</a>
+    <a href="../pages/rules.html">Prop Firm Rules</a>
+    <a href="../pages/payouts.html">Payouts</a>
+  </nav>
+</header>
+
+<!-- Newsletter Modal (included once via header include) -->
+<div class="modal-overlay" id="newsletterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
+  <div class="modal-card" role="document">
+    <button class="modal-close" id="closeNewsletter" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="modal-head">
+      <h3 id="nlTitle">Stay in the loop</h3>
+      <p>Get new discounts, payout updates, and rule changes — straight to your inbox.</p>
+    </div>
+
+    <form id="newsletterForm" class="modal-form" novalidate>
+      <div class="field">
+        <label for="nlName">Name</label>
+        <input type="text" id="nlName" name="name" placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label for="nlEmail">Email <span class="req">*</span></label>
+        <input type="email" id="nlEmail" name="email" placeholder="you@example.com" required>
+        <div class="field-hint" id="emailError" hidden>Enter a valid email.</div>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="nlConsent" required>
+        I agree to receive occasional emails. <a href="../legal/privacy.html" target="_blank" rel="noopener">Privacy</a>
+      </label>
+      <div class="field-hint" id="consentError" hidden>Please accept to continue.</div>
+
+      <button type="submit" class="btn cta" id="nlSubmit">
+        <i class="fas fa-paper-plane"></i> Subscribe
+      </button>
+
+      <div class="success" id="nlSuccess" hidden>Thanks! You’re subscribed. 🎉</div>
+      <div class="error" id="nlFail" hidden>Hmm, something went wrong. Please try again.</div>
+    </form>
+  </div>
+</div>
