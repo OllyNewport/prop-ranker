@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Futures Prop Ranker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -12,34 +13,135 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../css/theme.css"/>
   <link rel="stylesheet" href="../css/home.css"/>
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
 </head>
 
 <body>
   <header id="headerMount"></header>
   <script src="../js/header.js" defer></script>
 
+
   <main>
-    <div class="container trustpilot-pill">
-      <span class="tp-badge"><i class="fas fa-star"></i> Trustpilot</span>
-      <span class="tp-score">4.8</span>
-      <span class="tp-stars">★★★★★</span>
-    </div>
+    
 
     <!-- HERO -->
     <section class="hero container">
-      <h1 class="hero-title">The Leading Prop Firm Comparison Platform</h1>
-      <p class="hero-sub">Where serious traders compare top firms — and get the best discounts.</p>
+      <h1 class="hero-title">Compare The Top Prop Firms</h1>
+      <p class="hero-sub">Where traders can compare value, deals, and reviews</p>
 
       <div class="hero-badges">
         <div class="badge-box"><i class="fas fa-shield-alt"></i> 50+ Verified Top Prop Firms</div>
-        <div class="badge-box"><i class="fas fa-list-check"></i> 500+ Challenges</div>
+        <div class="badge-box"><i class="fas fa-list-check"></i> 400+ Challenges</div>
         <div class="badge-box"><i class="fas fa-comments"></i> 5,000+ Real Trader Reviews</div>
-        <div class="badge-box"><i class="fas fa-globe"></i> 3M+ Monthly Website Views</div>
+        <div class="badge-box"><i class="fas fa-globe"></i> Futures and Forex prop firms</div>
       </div>
     </section>
 
-    <!-- (Original Offers section remains wherever you already have it.
-         We intentionally removed the new "November Offers" rail so your old styling is preserved.) -->
+    <section class="popular-firms container">
+  <!-- Futures card -->
+  <div class="popular-card popular-futures">
+    <div class="popular-card-inner">
+      <div class="popular-card-header">
+        <h3>Most Popular Futures Prop Firms <span>🏆</span></h3>
+      </div>
+
+      <ul class="popular-list">
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🏆</span>
+            <div>
+              <div class="popular-name">My Funded Futures</div>
+              <div class="popular-rating">4.6 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-futures">
+            5% OFF
+          </button>
+        </li>
+
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🥈</span>
+            <div>
+              <div class="popular-name">Apex Trader Funding</div>
+              <div class="popular-rating">4.7 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-futures">
+            15% OFF
+          </button>
+        </li>
+
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🥉</span>
+            <div>
+              <div class="popular-name">Alpha Futures</div>
+              <div class="popular-rating">4.8 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-futures">
+            55% OFF
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Forex card -->
+  <div class="popular-card popular-forex">
+    <div class="popular-card-inner">
+      <div class="popular-card-header">
+        <h3>Most Popular Forex Prop Firms <span>💹</span></h3>
+      </div>
+
+      <ul class="popular-list">
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🏆</span>
+            <div>
+              <div class="popular-name">FTMO</div>
+              <div class="popular-rating">4.9 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-forex">
+            10% OFF
+          </button>
+        </li>
+
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🥈</span>
+            <div>
+              <div class="popular-name">Alpha Capital</div>
+              <div class="popular-rating">4.7 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-forex">
+            15% OFF
+          </button>
+        </li>
+
+        <li class="popular-item">
+          <div class="popular-left">
+            <span class="popular-icon">🥉</span>
+            <div>
+              <div class="popular-name">Funding Pips</div>
+              <div class="popular-rating">4.5 ★★★★★</div>
+            </div>
+          </div>
+          <button class="popular-discount popular-discount-forex">
+            20% OFF
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
     <!-- FILTER BAR -->
     <section class="seg-filters container" style="padding:0 1rem">

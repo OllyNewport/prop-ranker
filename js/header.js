@@ -9,18 +9,37 @@
 
 
 
-  // 3) Active nav highlight
-  const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  document.querySelectorAll('.main-nav a, nav .main-nav a, nav a').forEach(a => {
-    const href = (a.getAttribute('href') || '').toLowerCase();
-    if (!href) return;
-    // Basic match; treat root/index as Home
-    const isIndex = page === '' || page === 'index' || page === 'index.html';
-    const isHomeLink = href.endsWith('index.html') || href === './' || href === '#';
-    if ((isIndex && isHomeLink) || href.includes(page)) {
-      a.classList.add('active');
+  // ---- Active nav highlight
+const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+const navLinks = document.querySelectorAll('.main-nav a');
+
+navLinks.forEach(link => {
+  const href = (link.getAttribute('href') || '').toLowerCase();
+
+  // Strip off the hash (e.g. index.html#firms -> index.html)
+  const hrefWithoutHash = href.split('#')[0];
+  const hrefPage = hrefWithoutHash.split('/').pop();
+
+  // Home page special case:
+  // when we're on index.html, only the *plain* Home link should be active,
+  // not the section links like index.html#firms or index.html#page-bottom.
+  if (page === 'index.html') {
+    if (href.endsWith('index.html') && !href.includes('#')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
-  });
+  } else {
+    // Other pages: match by page name
+    if (hrefPage === page) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  }
+});
+
 
   // 4) Theme / MODE switch (Futures vs Forex)
   const html = document.documentElement;
@@ -126,3 +145,16 @@
     }
   });
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage || (currentPage === "" && link.getAttribute("href") === "index.html")) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});

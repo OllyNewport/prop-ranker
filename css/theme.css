@@ -910,3 +910,206 @@ body::after {
   align-items: center;
   gap: 1.75rem;  /* spacing between logo and Futures/Forex toggle */
 }
+
+/* Center hero heading and subtext */
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* optional for spacing */
+}
+
+.hero h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  text-align: center;
+  color: #ccc;
+}
+
+/* Popular firms cards under the hero pills */
+.popular-firms {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Outer gradient border */
+.popular-card {
+  border-radius: 18px;
+  padding: 1px; /* border thickness */
+  background: linear-gradient(135deg, #ff4fd8, #ffb347);
+}
+
+/* Futures = pink / orange glow */
+.popular-card.popular-futures {
+  background: linear-gradient(135deg, #ff4fd8, #ff7ac4);
+}
+
+/* Forex = blue glow */
+.popular-card.popular-forex {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+/* Inner dark panel */
+.popular-card-inner {
+  background: rgba(7, 7, 16, 0.98);
+  border-radius: inherit;
+  padding: 1.1rem 1.25rem 0.9rem;
+}
+
+/* Header */
+.popular-card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+/* List */
+.popular-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Each row */
+.popular-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.65rem;
+  border-radius: 12px;
+  background: rgba(15, 15, 28, 0.9);
+}
+
+/* Left side (icon + text) */
+.popular-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.popular-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.1rem;
+}
+
+.popular-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.popular-rating {
+  margin-top: 0.1rem;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f9fafb;
+}
+
+/* Discount pill on the right */
+.popular-discount {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: default;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Color variants */
+.popular-discount-futures {
+  background: linear-gradient(135deg, #ff4fd8, #ff7ac4);
+}
+
+.popular-discount-forex {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+/* Small tweak on very narrow screens */
+@media (max-width: 480px) {
+  .popular-item {
+    padding-inline: 0.5rem;
+  }
+
+  .popular-name {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Test */
+
+.nav-link.active {
+  border-bottom: 3px solid #00bfff; /* or your blue accent color */
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #00bfff;
+}
+
+.nav-link.active:hover {
+  border-bottom: 3px solid #00bfff; /* keep consistent */
+}
+
+/* Center the nav bar and add spacing between links */
+.main-nav {
+  display: flex;
+  justify-content: center;   /* centers the links horizontally */
+  align-items: center;
+  gap: 5rem;                 /* space between each link */
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Adjust link styling */
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Hover and active state */
+.main-nav a:hover,
+.main-nav a.active {
+  color: #fff;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  border-radius: 2px;
+}
