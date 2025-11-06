@@ -1113,3 +1113,11 @@ body::after {
   background: linear-gradient(90deg, #00bfff, #007bff);
   border-radius: 2px;
 }
+
+
+.popular-discount,
+.popular-discount:hover,
+.popular-discount:focus {
+  cursor: pointer;
+  text-decoration: none;
+}

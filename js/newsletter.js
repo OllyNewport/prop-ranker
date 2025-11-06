@@ -1,23 +1,17 @@
-// Newsletter submit handler
+// Newsletter submit handler for the bottom CTA form
 (function () {
-  const form = document.getElementById('newsletterForm');
+  const form = document.querySelector('.nl-form');
   const emailEl = document.getElementById('nl-email');
   const hint = document.getElementById('nl-hint');
   if (!form || !emailEl) return;
 
-  // OPTIONAL: set one of these to wire a real backend
-  // 1) Formspree endpoint (easiest)
-  // window.NEWSLETTER_FORM = { action: "https://formspree.io/f/XXXXYYYY", method: "POST" };
-
-  // 2) Your own endpoint/serverless function (Node/Express or Vercel)
-  // window.NEWSLETTER_FORM = { action: "/api/newsletter", method: "POST" };
-
   function show(msg, ok = true) {
+    if (!hint) return;
     hint.textContent = msg;
     hint.style.color = ok ? "#b7ffc7" : "#ffb3c1";
   }
 
-  function validEmail(v){
+  function validEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v).trim());
   }
 
@@ -31,22 +25,34 @@
       return;
     }
 
-    // Visual feedback
     const btn = form.querySelector('button[type="submit"]');
-    const prev = btn.textContent;
-    btn.disabled = true; btn.textContent = "Subscribing…"; show("");
+    const prev = btn ? btn.textContent : "";
+    if (btn) { btn.disabled = true; btn.textContent = "Subscribing…"; }
+    show("");
 
     try {
-      if (window.NEWSLETTER_FORM?.action) {
-        // Real submit to Formspree / your backend
-        const res = await fetch(window.NEWSLETTER_FORM.action, {
-          method: window.NEWSLETTER_FORM.method || "POST",
+      const endpoint =
+        (window.NEWSLETTER_FORM && window.NEWSLETTER_FORM.action) ||
+        window.NEWSLETTER_ENDPOINT ||
+        null;
+
+      if (endpoint) {
+        const method =
+          (window.NEWSLETTER_FORM && window.NEWSLETTER_FORM.method) || "POST";
+
+        const res = await fetch(endpoint, {
+          method,
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email })
+          body: JSON.stringify({
+            email,
+            source: location.href,
+            ts: new Date().toISOString()
+          })
         });
+
         if (!res.ok) throw new Error("Request failed");
       } else {
-        // Demo fallback: pretend success (no network)
+        // Fallback demo mode: pretend success
         await new Promise(r => setTimeout(r, 600));
       }
 
@@ -56,7 +62,7 @@
       console.error(err);
       show("Something went wrong. Please try again.", false);
     } finally {
-      btn.disabled = false; btn.textContent = prev;
+      if (btn) { btn.disabled = false; btn.textContent = prev; }
     }
   });
 })();

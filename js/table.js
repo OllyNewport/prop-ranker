@@ -10,9 +10,30 @@
   let mode = (localStorage.getItem('mode') || 'futures').toLowerCase(); // 'futures' | 'forex'
   if (mode === 'fx') mode = 'forex';
 
-  let original = []; // current dataset in original order
+  let original = [];
   let currentView = 'popular';
   let query = '';
+
+  // ✅ Affiliate links mapping
+  const affiliateLinks = {
+    topstep: "https://www.topstep.com/",
+    apex: "https://apextraderfunding.com/?coupon=prop-ranker",
+    mff: "https://myforexfunds.com/",
+    alphafutures: "https://app.alpha-futures.com/signup/Oliver010361/",
+    bulenox: "https://bulenox.com/member/aff/go/prop-ranker/",
+    fundingticks: "https://app.fundingticks.com/register?ref=872BDA0E",
+    toponefutures: "https://toponefutures.com/",
+    tradeify: "https://tradeifyfunding.com/",
+    fundednextfutures: "https://fundednext.com/",
+    aquafutures: "https://aquafutures.com/",
+    takeprofittrader: "https://takeprofittrader.com/",
+    e8futures: "https://e8markets.com/",
+    tradeday: "https://tradeday.com/",
+    blueguardianfutures: "https://checkout.blueguardianfutures.com/ref/935/",
+    tradingpitfutures: "https://thetradingpit.com/",
+    earn2trade: "https://earn2trade.com/",
+    traderslaunch: "https://traderslaunch.com/"
+  };
 
   // ---- data loading
   async function loadData(whichMode) {
@@ -63,22 +84,28 @@
   }
 
   function makeRows(list) {
-    return list.map(f => `
-      <div class="table-row">
-        <div class="td firm"><span class="firm-name">${f.name}</span></div>
-        <div class="td rank">
-          <span class="score">${Number(f.rating || 0).toFixed(1)}</span>
-          <span class="reviews">(${Number(f.reviews || 0).toLocaleString()})</span>
+    return list.map(f => {
+      const slug = (f.slug || f.name || '').toLowerCase().replace(/\s+/g, '');
+      const link = affiliateLinks[slug] || '#';
+      return `
+        <div class="table-row">
+          <div class="td firm"><span class="firm-name">${f.name}</span></div>
+          <div class="td rank">
+            <span class="score">${Number(f.rating || 0).toFixed(1)}</span>
+            <span class="reviews">(${Number(f.reviews || 0).toLocaleString()})</span>
+          </div>
+          <div class="td country"><span class="flag">${f.country || ''}</span></div>
+          <div class="td years">${f.years ?? ''}</div>
+          <div class="td assets">${(f.assets || []).map(a => chip(a)).join('')}</div>
+          <div class="td platforms">${(f.platforms || []).map(p => chip(p, true)).join('')}</div>
+          <div class="td allocation">${dollars(f.maxAllocation)}</div>
+          <div class="td promo">${f.promo ? `<span class="promo-pill soft">${f.promo}</span>` : ''}</div>
+          <div class="td actions">
+            <a class="btn firm-btn" href="${link}" target="_blank" rel="sponsored noopener">Firm</a>
+          </div>
         </div>
-        <div class="td country"><span class="flag">${f.country || ''}</span></div>
-        <div class="td years">${f.years ?? ''}</div>
-        <div class="td assets">${(f.assets || []).map(a => chip(a)).join('')}</div>
-        <div class="td platforms">${(f.platforms || []).map(p => chip(p, true)).join('')}</div>
-        <div class="td allocation">${dollars(f.maxAllocation)}</div>
-        <div class="td promo">${f.promo ? `<span class="promo-pill soft">${f.promo}</span>` : ''}</div>
-        <div class="td actions"><a class="btn firm-btn" href="#!" rel="sponsored noopener">Firm</a></div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   function render() {
@@ -86,12 +113,10 @@
     list = filterByQuery(list);
     mount.innerHTML = header + makeRows(list);
     if (searchInput) searchInput.value = query;
-    // ensure pills reflect current view
     btnPopular?.classList.toggle('pill-on', currentView === 'popular');
     btnAll?.classList.toggle('pill-on', currentView === 'all');
   }
 
-  // ---- wire up controls
   btnPopular?.addEventListener('click', () => { currentView = 'popular'; render(); });
   btnAll?.addEventListener('click', () => { currentView = 'all'; render(); });
 
@@ -100,12 +125,10 @@
     render();
   });
 
-  // ---- listen for mode change from header
   window.addEventListener('modechange', (e) => {
     mode = e.detail?.mode || 'futures';
     loadData(mode);
   });
 
-  // initial
   loadData(mode);
 })();
